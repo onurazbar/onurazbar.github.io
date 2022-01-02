@@ -1,1 +1,0 @@
-Onur Azbar
