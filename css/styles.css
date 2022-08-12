@@ -26,11 +26,11 @@ img {
 }
 
 @keyframes animation1_frames {
-    0%   {background-color: black; left: 5%; top: 20px; }
-    25%  {background-color: red; left: 15%; top: 20px; transform: rotate(90deg);}
-    50%  {background-color: green; left: 25%; top: 20px; transform: rotate(180deg);}
-    75%  {background-color: blue; left: 35%; top: 20px; transform: rotate(270deg);}
-    100% {background-color: black; left: 45%; top: 20px; transform: rotate(360deg);}
+    0%   {background-color: black; left: 7%; top: 20px; }
+    25%  {background-color: red; left: 17%; top: 20px; transform: rotate(90deg);}
+    50%  {background-color: green; left: 27%; top: 20px; transform: rotate(180deg);}
+    75%  {background-color: blue; left: 37%; top: 20px; transform: rotate(270deg);}
+    100% {background-color: black; left: 47%; top: 20px; transform: rotate(360deg);}
 }
 
 .animation2 {
@@ -47,9 +47,9 @@ img {
 }
 
 @keyframes animation2_frames {
-    0%   {background-color: black; left: 85%; top: 20px; }
-    25%  {background-color: red; left: 75%; top: 20px; transform: rotate(-90deg);}
-    50%  {background-color: green; left: 65%; top: 20px; transform: rotate(-180deg);}
-    75%  {background-color: blue; left: 55%; top: 20px; transform: rotate(-270deg);}
-    100% {background-color: black; left: 45%; top: 20px; transform: rotate(-360deg);}
+    0%   {background-color: black; left: 87%; top: 20px; }
+    25%  {background-color: red; left: 77%; top: 20px; transform: rotate(-90deg);}
+    50%  {background-color: green; left: 67%; top: 20px; transform: rotate(-180deg);}
+    75%  {background-color: blue; left: 57%; top: 20px; transform: rotate(-270deg);}
+    100% {background-color: black; left: 47%; top: 20px; transform: rotate(-360deg);}
 }
