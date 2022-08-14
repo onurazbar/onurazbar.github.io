@@ -53,3 +53,20 @@ h1 {
     75%  {background-color: blue; left: 57%; top: 20px; transform: rotate(-270deg);}
     100% {background-color: black; left: 47%; top: 20px; transform: rotate(-360deg);}
 }
+
+.main_menu_layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main_menu_button_list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 46%;
+}
+
+.main_menu_button {
+
+}
