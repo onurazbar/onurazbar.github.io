@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Onur Azbar</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script type="text/javascript" src="../js/project.js"></script>
 </head>
 <body>
     <header>
@@ -14,16 +15,16 @@
     <section>
         <nav>
             <div class="page_section_button_list">
-                <button class="page_section_button">Space Craft</button>
-                <button class="page_section_button">Snake</button>
-                <button class="page_section_button">Back Gammon</button>
-                <button class="page_section_button">Ray Tracer</button>
+                <button class="page_section_button" onclick="onSpaceCraftButtonClick()">Space Craft</button>
+                <button class="page_section_button" onclick="onSnakeButtonClick()">Snake</button>
+                <button class="page_section_button" onclick="onBackGammonButtonClick()">Back Gammon</button>
+                <button class="page_section_button" onclick="onRayTracerButtonClick()">Ray Tracer</button>
             </div>
         </nav>
     </section>
 
     <article>
-        <iframe src="project_intro.html" title="Project Details"></iframe>
+        <iframe src="project_intro.html" title="Project Details" id="project_iframe"></iframe>
     </article>
 </body>
 </html>
