@@ -1,15 +1,19 @@
-function onSpaceCraftButtonClick() {
+function onSpaceCraftButtonClick()
+{
     document.getElementById("project_iframe").setAttribute("src", "spacecraft.html");
 }
 
-function onSnakeButtonClick() {
+function onSnakeButtonClick()
+{
     document.getElementById("project_iframe").setAttribute("src", "snake.html");
 }
 
-function onBackGammonButtonClick() {
+function onBackGammonButtonClick()
+{
     document.getElementById("project_iframe").setAttribute("src", "backgammon.html");
 }
 
-function onRayTracerButtonClick() {
+function onRayTracerButtonClick()
+{
     document.getElementById("project_iframe").setAttribute("src", "raytracer.html");
 }
