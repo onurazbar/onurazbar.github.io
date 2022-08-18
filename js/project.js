@@ -1,26 +1,36 @@
 function onProjectIntroButtonClick()
 {
-    document.getElementById("project_iframe").setAttribute("src", "project_intro.html");
+    if (document.getElementById("project_iframe").getAttribute("src") != "project_intro.html") {
+        document.getElementById("project_iframe").setAttribute("src", "project_intro.html");
+    }
 }
 
 function onSpaceCraftButtonClick()
 {
-    document.getElementById("project_iframe").setAttribute("src", "spacecraft.html");
+    if (document.getElementById("project_iframe").getAttribute("src") != "spacecraft.html") {
+        document.getElementById("project_iframe").setAttribute("src", "spacecraft.html");
+    }
 }
 
 function onSnakeButtonClick()
 {
-    document.getElementById("project_iframe").setAttribute("src", "snake.html");
+    if (document.getElementById("project_iframe").getAttribute("src") != "snake.html") {
+        document.getElementById("project_iframe").setAttribute("src", "snake.html");
+    }
 }
 
 function onBackGammonButtonClick()
 {
-    document.getElementById("project_iframe").setAttribute("src", "backgammon.html");
+    if (document.getElementById("project_iframe").getAttribute("src") != "backgammon.html") {
+        document.getElementById("project_iframe").setAttribute("src", "backgammon.html");
+    }
 }
 
 function onRayTracerButtonClick()
 {
-    document.getElementById("project_iframe").setAttribute("src", "raytracer.html");
+    if (document.getElementById("project_iframe").getAttribute("src") != "raytracer.html") {
+        document.getElementById("project_iframe").setAttribute("src", "raytracer.html");
+    }
 }
 
 function onBackToHomepageButtonClick()
