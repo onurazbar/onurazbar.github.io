@@ -1,3 +1,8 @@
+function onProjectIntroButtonClick()
+{
+    document.getElementById("project_iframe").setAttribute("src", "project_intro.html");
+}
+
 function onSpaceCraftButtonClick()
 {
     document.getElementById("project_iframe").setAttribute("src", "spacecraft.html");
@@ -16,4 +21,9 @@ function onBackGammonButtonClick()
 function onRayTracerButtonClick()
 {
     document.getElementById("project_iframe").setAttribute("src", "raytracer.html");
+}
+
+function onBackToHomepageButtonClick()
+{
+    window.location.href = "../index.html";
 }
