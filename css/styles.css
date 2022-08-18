@@ -23,7 +23,7 @@ nav {
 }
 
 iframe {
-    height: 100%; 
+    height: 800px; 
     width: 89%;
     border: none;
 }
@@ -119,4 +119,8 @@ iframe {
 
 .page_section_button:hover {
     background-color: rgb(110, 150, 200);
+}
+
+.page_header {
+    font-size: 50px;
 }
