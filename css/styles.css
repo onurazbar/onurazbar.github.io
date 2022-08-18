@@ -26,6 +26,8 @@ iframe {
     height: 800px; 
     width: 89%;
     border: none;
+    padding-top: 5px;
+    padding-left: 15px;
 }
 
 .link_icon {
