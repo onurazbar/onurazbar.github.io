@@ -11,20 +11,21 @@ img {
 }
 
 header {
+    height: 10vh;
     border-bottom: solid;
 }
 
 nav {
     float: left;
-    width: 10%;
+    width: 10vw;
     height: 100%;
-    min-height: 810px;
+    min-height: 84vh;
     border-right: solid;
 }
 
 iframe {
-    height: 800px; 
-    width: 89%;
+    height: 82vh; 
+    width: 87vw;
     border: none;
     padding-top: 5px;
     padding-left: 15px;
