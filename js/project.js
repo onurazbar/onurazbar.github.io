@@ -35,5 +35,5 @@ function onRayTracerButtonClick()
 
 function onBackToHomepageButtonClick()
 {
-    window.location.href = "../index.html";
+    window.location.href = "https://onurazbar.github.io/";
 }
