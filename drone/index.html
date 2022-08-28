@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Onur Azbar</title>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<script type="text/javascript" src="../js/drone.js"></script>
 </head>
 <body>
 	<header>
@@ -15,11 +16,16 @@
     <section>
     	<nav>
     		<div class="page_section_button_list">
-    			<button class="page_section_button">Drone Introduction</button>
-    			<button class="page_section_button">FPV Drones</button>
-    			<button class="page_section_button">My Flights</button>
+    			<button class="page_section_button" onclick="onDroneIntroButtonClick()">Drone Introduction</button>
+    			<button class="page_section_button" onclick="onFpvDronesButtonClick()">FPV Drones</button>
+    			<button class="page_section_button" onclick="onFlightsButtonClick()">My Flights</button>
+    			<button class="page_section_button" onclick="onBackToHomepageButtonClick()">Back to Homepage</button>
     		</div>
     	</nav>
     </section>
+
+    <article>
+        <iframe src="drone_intro.html" title="FPV Drones" id="drone_iframe"></iframe>
+    </article>
 </body>
 </html>>
