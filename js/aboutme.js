@@ -1,9 +1,9 @@
 function onDownloadMyCvButtonClick()
 {
-    var a = document.createElement("a");
-    a.href = "Onur_Azbar_Resume.pdf";
-    a.setAttribute("download", "Onur_Azbar_Resume");
-    a.click();
+    var cv = document.createElement("a");
+    cv.href = "Onur_Azbar_Resume.pdf";
+    cv.setAttribute("download", "Onur_Azbar_Resume");
+    cv.click();
 }
 
 function onBackToHomepageButtonClick()
