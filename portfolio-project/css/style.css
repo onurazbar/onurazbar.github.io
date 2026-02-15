@@ -186,6 +186,7 @@ body[data-lang="en"] .lang-label-en {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin-left: 40px;
 }
 
 .nav-menu a {
@@ -760,6 +761,7 @@ body[data-lang="en"] .lang-label-en {
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
         gap: 0;
+        margin-left: 0;
     }
 
     .nav-menu.active {
@@ -882,6 +884,8 @@ body[data-lang="en"] .lang-label-en {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     }
 }
+
+
 
 
 
