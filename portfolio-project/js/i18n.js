@@ -9,7 +9,7 @@ const translations = {
             contact: 'İletişim'
         },
         hero: {
-            subtitle: 'Yazılım Geliştirici & Web Designer',
+            subtitle: 'Yazılım Geliştirici',
             description: 'Modern ve yaratıcı web çözümleri geliştiririm',
             viewProjects: 'Projelerimi Gör',
             contact: 'Bana Ulaş'
@@ -89,7 +89,7 @@ const translations = {
             contact: 'Contact'
         },
         hero: {
-            subtitle: 'Software Developer & Web Designer',
+            subtitle: 'Software Engineer',
             description: 'I develop modern and creative web solutions',
             viewProjects: 'View My Projects',
             contact: 'Get In Touch'
