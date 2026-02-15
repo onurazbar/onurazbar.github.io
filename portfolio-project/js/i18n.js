@@ -67,7 +67,7 @@ const translations = {
             email: 'Email',
             phone: 'Telefon',
             address: 'Adres',
-            city: 'İstanbul, Türkiye',
+            city: 'İzmir, Türkiye',
             form: {
                 name: 'Adınız',
                 email: 'Email Adresiniz',
@@ -147,7 +147,7 @@ const translations = {
             email: 'Email',
             phone: 'Phone',
             address: 'Address',
-            city: 'Istanbul, Turkey',
+            city: 'Izmir, Turkey',
             form: {
                 name: 'Your Name',
                 email: 'Your Email',
