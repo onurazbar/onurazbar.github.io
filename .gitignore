@@ -1,13 +1,67 @@
-# Ignore the contents of the _site directory and other cache directories
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build files
+dist/
+build/
+*.log
+
+# OS
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+*.cache
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Jekyll (not used - removed)
 _site/
 .sass-cache/
-
-# Ignore the directory for local files during development
-local/
-
-# Ignore the Gemfile that is generated
+_config.yml
+_config_docker.yml
+Gemfile
 Gemfile.lock
+.nojekyll
 
-# Ingore files created by npm
-node_modules
-package-lock.json
+# Old files (not used - removed)
+Dockerfile
+docker-compose.yaml
+talkmap/
+talkmap.py
+talkmap.ipynb
+
+# Old directories (removed)
+_includes/
+_layouts/
+_pages/
+_posts/
+_publications/
+_sass/
+_talks/
+_teaching/
+_data/
+_portfolio/
+_drafts/
+assets/
+files/
+images/
+markdown_generator/
