@@ -67,24 +67,24 @@ body[data-lang="en"] .lang-label-en {
 }
 
 .lang-btn {
-    padding: 6px 10px;
+    padding: 6px 12px;
     border: 2px solid transparent;
     background: transparent;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 0.85rem;
     transition: var(--transition);
     color: var(--text-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
+    white-space: nowrap;
 }
 
 .lang-btn:hover {
     background: var(--light-bg);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .lang-btn.active {
@@ -783,9 +783,8 @@ body[data-lang="en"] .lang-label-en {
     }
 
     .lang-btn {
-        padding: 4px 8px;
-        font-size: 1rem;
-        min-width: 36px;
+        padding: 5px 10px;
+        font-size: 0.75rem;
     }
 
     .hero-title {
@@ -870,14 +869,16 @@ body[data-lang="en"] .lang-label-en {
 
     .lang-btn {
         padding: 4px 8px;
-        font-size: 0.9rem;
-        min-width: 34px;
+        font-size: 0.7rem;
     }
 
     .project-card {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     }
 }
+
+
+
 
 
 
