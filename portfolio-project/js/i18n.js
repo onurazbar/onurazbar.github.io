@@ -9,7 +9,7 @@ const translations = {
             contact: 'İletişim'
         },
         hero: {
-            subtitle: 'Yazılım Geliştirici',
+            subtitle: 'Yazılım Mühendisi',
             description: 'Modern ve yaratıcı web çözümleri geliştiririm',
             viewProjects: 'Projelerimi Gör',
             contact: 'Bana Ulaş'
