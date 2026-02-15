@@ -256,7 +256,6 @@ if ('IntersectionObserver' in window) {
 
 // Add scroll-to-top button functionality
 window.addEventListener('scroll', () => {
-    // You can add scroll-to-top button here if needed
     const scrollPosition = window.pageYOffset;
     const navbar = document.querySelector('.navbar');
 
@@ -269,12 +268,13 @@ window.addEventListener('scroll', () => {
 
 // Mobile menu close on outside click
 document.addEventListener('click', (e) => {
-    const isClickInsideNav = document.querySelector('.navbar').contains(e.target);
+    const navbar = document.querySelector('.navbar');
+    const isClickInsideNav = navbar && navbar.contains(e.target);
     if (!isClickInsideNav && navMenu.classList.contains('active')) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
     }
 });
 
-console.log('Portfolio website loaded successfully!');
+console.log('Portfolio website with multi-language support loaded successfully!');
 
