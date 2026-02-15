@@ -29,32 +29,62 @@ body {
 /* ============= Language Switcher ============= */
 .language-switcher {
     position: fixed;
-    top: 20px;
+    top: 10px;
     right: 20px;
     z-index: 2000;
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 12px;
     background: white;
-    padding: 8px;
+    padding: 8px 14px;
     border-radius: 50px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.lang-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+
+.lang-label-tr {
+    display: block;
+}
+
+.lang-label-en {
+    display: none;
+}
+
+body[data-lang="en"] .lang-label-tr {
+    display: none;
+}
+
+body[data-lang="en"] .lang-label-en {
+    display: block;
+}
+
 .lang-btn {
-    padding: 8px 14px;
+    padding: 6px 10px;
     border: 2px solid transparent;
     background: transparent;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     transition: var(--transition);
     color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
 }
 
 .lang-btn:hover {
     background: var(--light-bg);
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .lang-btn.active {
@@ -743,8 +773,19 @@ body {
     }
 
     .language-switcher {
-        top: 80px;
+        top: 70px;
         right: 15px;
+        padding: 6px 10px;
+    }
+
+    .lang-label {
+        font-size: 0.75rem;
+    }
+
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 1rem;
+        min-width: 36px;
     }
 
     .hero-title {
@@ -819,16 +860,25 @@ body {
     }
 
     .language-switcher {
-        padding: 6px;
+        padding: 6px 10px;
+        gap: 10px;
+    }
+
+    .lang-label {
+        font-size: 0.7rem;
     }
 
     .lang-btn {
-        padding: 6px 10px;
-        font-size: 0.8rem;
+        padding: 4px 8px;
+        font-size: 0.9rem;
+        min-width: 34px;
     }
 
     .project-card {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     }
 }
+
+
+
 
