@@ -48,6 +48,8 @@ body {
     font-size: 0.85rem;
     color: var(--text-dark);
     white-space: nowrap;
+    width: 65px;
+    min-width: 65px;
 }
 
 .lang-label-tr {
@@ -780,6 +782,8 @@ body[data-lang="en"] .lang-label-en {
 
     .lang-label {
         font-size: 0.75rem;
+        width: 60px;
+        min-width: 60px;
     }
 
     .lang-btn {
@@ -865,6 +869,8 @@ body[data-lang="en"] .lang-label-en {
 
     .lang-label {
         font-size: 0.7rem;
+        width: 55px;
+        min-width: 55px;
     }
 
     .lang-btn {
@@ -876,6 +882,9 @@ body[data-lang="en"] .lang-label-en {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     }
 }
+
+
+
 
 
 
