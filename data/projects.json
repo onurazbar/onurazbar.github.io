@@ -1,0 +1,71 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title_tr": "E-Commerce Platformu",
+      "title_en": "E-Commerce Platform",
+      "description_tr": "React ve Node.js ile geliştirilmiş tam özellikli e-ticaret platformu. Ödeme entegrasyonu ve admin paneli dahildir.",
+      "description_en": "A full-featured e-commerce platform developed with React and Node.js. Includes payment integration and admin panel.",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "image": "ecommerce.jpg",
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 2,
+      "title_tr": "Mobil Uygulama",
+      "title_en": "Mobile Application",
+      "description_tr": "Flutter ile geliştirilen çapraz platform mobil uygulama. iOS ve Android için optimize edilmiş.",
+      "description_en": "Cross-platform mobile application developed with Flutter. Optimized for iOS and Android.",
+      "technologies": ["Flutter", "Dart", "Firebase"],
+      "image": "mobile.jpg",
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 3,
+      "title_tr": "Veri Analiz Paneli",
+      "title_en": "Data Analysis Dashboard",
+      "description_tr": "Python ve D3.js kullanarak oluşturulmuş interaktif veri görselleştirme paneli.",
+      "description_en": "Interactive data visualization dashboard created with Python and D3.js.",
+      "technologies": ["Python", "D3.js", "Flask"],
+      "image": "dashboard.jpg",
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 4,
+      "title_tr": "Bulut Depolama Uygulaması",
+      "title_en": "Cloud Storage Application",
+      "description_tr": "Vue.js ve AWS S3 ile geliştirilmiş bulut tabanlı dosya depolama sistemi.",
+      "description_en": "Cloud-based file storage system developed with Vue.js and AWS S3.",
+      "technologies": ["Vue.js", "AWS", "Express"],
+      "image": "cloud.jpg",
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 5,
+      "title_tr": "Sosyal Medya Uygulaması",
+      "title_en": "Social Media Application",
+      "description_tr": "Next.js ve PostgreSQL ile geliştirilmiş modern sosyal medya platformu. Real-time özellikler içerir.",
+      "description_en": "Modern social media platform developed with Next.js and PostgreSQL. Includes real-time features.",
+      "technologies": ["Next.js", "PostgreSQL", "WebSocket"],
+      "image": "social.jpg",
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 6,
+      "title_tr": "İnteraktif Oyun",
+      "title_en": "Interactive Game",
+      "description_tr": "JavaScript ve Canvas API kullanarak geliştirilmiş eğlenceli web tabanlı oyun.",
+      "description_en": "Fun web-based game developed with JavaScript and Canvas API.",
+      "technologies": ["JavaScript", "Canvas", "Phaser"],
+      "image": "game.jpg",
+      "demoUrl": "#",
+      "codeUrl": "#"
+    }
+  ]
+}
+
