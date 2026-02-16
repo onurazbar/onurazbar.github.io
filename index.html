@@ -3,64 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=./portfolio-project/">
+    <meta name="description" content="Onur Azbar - Portfolio">
     <title>Onur Azbar - Portfolio</title>
-    <link rel="canonical" href="https://onurazbar.github.io/portfolio-project/">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .container {
-            text-align: center;
-            color: white;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        a {
-            display: inline-block;
-            padding: 12px 30px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        .loading {
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1 class="loading">🚀 Yönlendiriliyorsunuz...</h1>
-        <p>Portfolio sayfasına geçiş yapılıyor. Lütfen bekleyin.</p>
-        <p><a href="./portfolio-project/">Devam Etmek İçin Tıklayın</a></p>
+<body data-lang="tr">
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="lang-label">
+            <span class="lang-label-tr">Dil</span>
+            <span class="lang-label-en">Language</span>
+        </div>
+        <button class="lang-btn active" data-lang="tr" title="Türkçe">
+            🇹🇷 TR
+        </button>
+        <button class="lang-btn" data-lang="en" title="English">
+            🇬🇧 EN
+        </button>
     </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="#home">OA</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" data-i18n="nav.home">Anasayfa</a></li>
+                    <li><a href="#about" data-i18n="nav.about">Hakkında</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Projeler</a></li>
+                    <li><a href="#skills" data-i18n="nav.skills">Yetenekler</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Onur Azbar</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Yazılım Geliştirici & Web Designer</p>
+                <p class="hero-description" data-i18n="hero.description">Modern ve yaratıcı web çözümleri geliştiririm</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">Projelerimi Gör</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.contact">Bana Ulaş</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/onurazbar" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/onur-azbar/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">Hakkında</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about.text1">Merhaba! Ben Onur Azbar, tutkulu bir yazılım geliştirici ve web tasarımcısı. Kullanıcı deneyimini odak noktası olarak, yüksek kaliteli ve işlevsel web uygulamaları geliştirmeyi seviyorum.</p>
+                    <p data-i18n="about.text2">Yaklaşık 5+ yıldır web teknolojileriyle çalışıyorum. Kodlamaya ve yeni teknolojileri öğrenmeye karşı tutkum sayesinde, her zaman en iyi çözümleri sunmayı hedefliyorum.</p>
+                    <p data-i18n="about.text3">Projelerimde, temiz kod yazma, performans optimizasyonu ve responsive tasarım ilkelerine her zaman dikkat ediyorum.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p data-i18n="about.projects">Tamamlanan Proje</p>
+                        </div>
+                        <div class="stat">
+                            <h3>30+</h3>
+                            <p data-i18n="about.clients">Memnun Müşteri</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p data-i18n="about.experience">Yıl Deneyim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">Projeler</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.project1.title">E-Commerce Platformu</h3>
+                        <p data-i18n="projects.project1.description">React ve Node.js ile geliştirilmiş tam özellikli e-ticaret platformu. Ödeme entegrasyonu ve admin paneli dahildir.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-i18n="projects.demo">Demo</a>
+                            <a href="#" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.project2.title">Mobil Uygulama</h3>
+                        <p data-i18n="projects.project2.description">Flutter ile geliştirilen çapraz platform mobil uygulama. iOS ve Android için optimize edilmiş.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-i18n="projects.demo">Demo</a>
+                            <a href="#" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.project3.title">Veri Analiz Paneli</h3>
+                        <p data-i18n="projects.project3.description">Python ve D3.js kullanarak oluşturulmuş interaktif veri görselleştirme paneli.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-i18n="projects.demo">Demo</a>
+                            <a href="#" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.project4.title">Bulut Depolama Uygulaması</h3>
+                        <p data-i18n="projects.project4.description">Vue.js ve AWS S3 ile geliştirilmiş bulut tabanlı dosya depolama sistemi.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-i18n="projects.demo">Demo</a>
+                            <a href="#" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.project5.title">Sosyal Medya Uygulaması</h3>
+                        <p data-i18n="projects.project5.description">Next.js ve PostgreSQL ile geliştirilmiş modern sosyal medya platformu. Real-time özellikler içerir.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-i18n="projects.demo">Demo</a>
+                            <a href="#" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.project6.title">İnteraktif Oyun</h3>
+                        <p data-i18n="projects.project6.description">JavaScript ve Canvas API kullanarak geliştirilmiş eğlenceli web tabanlı oyun.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Canvas</span>
+                            <span class="tech-tag">Phaser</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-i18n="projects.demo">Demo</a>
+                            <a href="#" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills.title">Yetenekler</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-i18n="skills.frontend">Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS3 / SCSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-i18n="skills.backend">Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Express.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 84%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 83%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-i18n="skills.tools">Araçlar & Diğer</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Git & GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name" data-i18n="skills.responsive">Responsive Tasarım</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 94%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name" data-i18n="skills.uiux">UI/UX Tasarım</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">İletişim</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-i18n="contact.heading">Benimle İletişime Geçin</h3>
+                    <p data-i18n="contact.description">Bir proje hakkında konuşmak veya soru sormak ister misiniz? Aşağıdaki yöntemlerle bana ulaşabilirsiniz.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-i18n="contact.email">Email</h4>
+                                <a href="mailto:onur@example.com">onur@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-i18n="contact.phone">Telefon</h4>
+                                <a href="tel:+905551234567">+90 555 123 4567</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4 data-i18n="contact.address">Adres</h4>
+                                <p data-i18n="contact.city">İstanbul, Türkiye</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız" required id="name" data-i18n-placeholder="contact.form.name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Adresiniz" required id="email" data-i18n-placeholder="contact.form.email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Konu" required id="subject" data-i18n-placeholder="contact.form.subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mesajınız" rows="5" required id="message" data-i18n-placeholder="contact.form.message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.form.send">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.copyright">&copy; 2026 Onur Azbar. Tüm Hakları Saklıdır.</p>
+            <div class="footer-social">
+                <a href="https://github.com/onurazbar" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/onur-azbar/" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
