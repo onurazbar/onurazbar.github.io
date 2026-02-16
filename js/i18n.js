@@ -55,8 +55,7 @@ const translations = {
         skills: {
             title: 'Yetenekler',
             programming: 'Programlama Dilleri',
-            backend: 'Backend',
-            tools: 'Araçlar & Diğer',
+            tools: 'Araçlar & Teknolojiler',
             responsive: 'Responsive Tasarım',
             uiux: 'UI/UX Tasarım'
         },
@@ -135,8 +134,7 @@ const translations = {
         skills: {
             title: 'Skills',
             programming: 'Programming Languages',
-            backend: 'Backend',
-            tools: 'Tools & Others',
+            tools: 'Tools & Technologies',
             responsive: 'Responsive Design',
             uiux: 'UI/UX Design'
         },
