@@ -25,6 +25,8 @@ Modern ve responsive bir portfolio web sitesidir.
 │   └── script.js       # İnteraktivite
 ├── data/
 │   └── projects.json   # Proje verisi
+├── images/
+│   └── profile.jpg     # Profil resmi (kendi resminizi koyun)
 └── README.md           # Bu dosya
 ```
 
@@ -53,6 +55,21 @@ Sağ üst köşedeki bayrak simgeleriyle diller arasında geçiş yapabilirsiniz
 Dil tercihi tarayıcıda kaydedilir.
 
 ## 📝 Özelleştirme
+
+### Profil Resminizi Ekleyin
+
+1. **Resminizi hazırlayın**:
+   - Boyut: Kare format (örn: 1:1 oranı)
+   - Format: JPG, PNG, WebP vb.
+   - Önerilen çözünürlük: 600x600px minimum
+
+2. **Resmi yükleyin**:
+   - `images/` klasörüne `profile.jpg` olarak kaydedin
+   - Dosya adını değiştirmek istiyorsanız:
+     - `index.html` dosyasında `src="images/profile.jpg"` kısmını değiştirin
+
+3. **Stil özelleştirmeleri** (isteğe bağlı):
+   - `css/style.css`'de `.profile-img` bölümünü düzenleyin
 
 ### Kendi Bilgilerinizi Ekleyin
 
@@ -105,4 +122,6 @@ Bu proje MIT Lisansı altında yayınlanmıştır. Detaylar için `LICENSE` dosy
 ---
 
 **Son Güncelleme**: 2026
+
+
 
