@@ -29,14 +29,14 @@ body {
 /* ============= Language Switcher ============= */
 .language-switcher {
     position: fixed;
-    top: 10px;
+    top: 75px;
     right: 20px;
     z-index: 2000;
     display: flex;
     align-items: center;
     gap: 12px;
     background: white;
-    padding: 8px 14px;
+    padding: 10px 16px;
     border-radius: 50px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -48,8 +48,8 @@ body {
     font-size: 0.85rem;
     color: var(--text-dark);
     white-space: nowrap;
-    width: 65px;
-    min-width: 65px;
+    width: 70px;
+    min-width: 70px;
 }
 
 .lang-label-tr {
@@ -69,30 +69,31 @@ body[data-lang="en"] .lang-label-en {
 }
 
 .lang-btn {
-    padding: 6px 12px;
+    padding: 6px 10px;
     border: 2px solid transparent;
     background: transparent;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     transition: var(--transition);
     color: var(--text-light);
     display: flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    line-height: 1;
 }
 
 .lang-btn:hover {
     background: var(--light-bg);
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .lang-btn.active {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 8px;
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
@@ -186,7 +187,7 @@ body[data-lang="en"] .lang-label-en {
     display: flex;
     list-style: none;
     gap: 2rem;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .nav-menu a {
@@ -777,20 +778,20 @@ body[data-lang="en"] .lang-label-en {
     }
 
     .language-switcher {
-        top: 70px;
+        top: 80px;
         right: 15px;
-        padding: 6px 10px;
+        padding: 8px 12px;
     }
 
     .lang-label {
         font-size: 0.75rem;
-        width: 60px;
-        min-width: 60px;
+        width: 65px;
+        min-width: 65px;
     }
 
     .lang-btn {
-        padding: 5px 10px;
-        font-size: 0.75rem;
+        padding: 5px 8px;
+        font-size: 1rem;
     }
 
     .hero-title {
@@ -865,19 +866,19 @@ body[data-lang="en"] .lang-label-en {
     }
 
     .language-switcher {
-        padding: 6px 10px;
+        padding: 8px 12px;
         gap: 10px;
     }
 
     .lang-label {
         font-size: 0.7rem;
-        width: 55px;
-        min-width: 55px;
+        width: 60px;
+        min-width: 60px;
     }
 
     .lang-btn {
-        padding: 4px 8px;
-        font-size: 0.7rem;
+        padding: 4px 6px;
+        font-size: 0.9rem;
     }
 
     .project-card {
