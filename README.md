@@ -115,7 +115,7 @@ Bu proje MIT Lisansı altında yayınlanmıştır. Detaylar için `LICENSE` dosy
 
 ## 💬 İletişim
 
-- **E-posta**: onur@example.com
+- **E-posta**: onurazbar@gmail.com
 - **GitHub**: [@onurazbar](https://github.com/onurazbar)
 - **LinkedIn**: [Onur Azbar](https://linkedin.com/in/onur-azbar/)
 
