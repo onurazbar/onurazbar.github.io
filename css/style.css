@@ -5,16 +5,20 @@
 }
 
 :root {
-    --primary-color: #0ea5e9;
-    --secondary-color: #06b6d4;
-    --dark-bg: #0f172a;
-    --light-bg: #f8fafc;
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-orange: #f97316;
+    --accent-red: #dc2626;
+    --dark-bg: #1e293b;
+    --light-bg: #f1f5f9;
+    --gray-light: #e2e8f0;
+    --gray-medium: #94a3b8;
     --text-dark: #1e293b;
     --text-light: #64748b;
     --border-color: #cbd5e1;
     --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --danger-color: #ef4444;
+    --warning-color: #f97316;
+    --danger-color: #dc2626;
     --transition: all 0.3s ease;
 }
 
@@ -38,7 +42,8 @@ body {
     background: white;
     padding: 10px 16px;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+    border: 2px solid var(--gray-light);
 }
 
 .lang-label {
@@ -91,10 +96,10 @@ body[data-lang="en"] .lang-label-en {
 }
 
 .lang-btn.active {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
     border-radius: 50%;
     padding: 8px;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
 
 /* ============= Utility Classes ============= */
@@ -109,7 +114,7 @@ body[data-lang="en"] .lang-label-en {
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2563eb, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -128,24 +133,24 @@ body[data-lang="en"] .lang-label-en {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
     color: white;
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--accent-orange);
+    border: 2px solid var(--accent-orange);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
+    background: var(--accent-orange);
     color: white;
 }
 
@@ -157,7 +162,7 @@ body[data-lang="en"] .lang-label-en {
     right: 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(37, 99, 235, 0.1);
     z-index: 1000;
     padding: 1rem 0;
 }
@@ -171,7 +176,7 @@ body[data-lang="en"] .lang-label-en {
 .logo a {
     font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2563eb, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -205,7 +210,7 @@ body[data-lang="en"] .lang-label-en {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: var(--accent-orange);
     transition: var(--transition);
 }
 
@@ -246,7 +251,7 @@ body[data-lang="en"] .lang-label-en {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    background: linear-gradient(135deg, #2563eb15 0%, #f9731615 100%);
     position: relative;
     margin-top: 60px;
     overflow: hidden;
@@ -257,7 +262,7 @@ body[data-lang="en"] .lang-label-en {
     position: absolute;
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2563eb, #f97316);
     border-radius: 50%;
     opacity: 0.1;
     top: -50px;
@@ -270,7 +275,7 @@ body[data-lang="en"] .lang-label-en {
     position: absolute;
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(135deg, #f97316, #2563eb);
     border-radius: 50%;
     opacity: 0.1;
     bottom: -50px;
@@ -293,7 +298,7 @@ body[data-lang="en"] .lang-label-en {
     font-size: 4.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2563eb, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -337,7 +342,7 @@ body[data-lang="en"] .lang-label-en {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
     color: white;
     font-size: 1.2rem;
     transition: var(--transition);
@@ -346,7 +351,7 @@ body[data-lang="en"] .lang-label-en {
 
 .social-links a:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
 }
 
 .scroll-indicator {
@@ -361,7 +366,7 @@ body[data-lang="en"] .lang-label-en {
     display: block;
     width: 3px;
     height: 20px;
-    background: var(--primary-color);
+    background: var(--accent-orange);
     border-radius: 3px;
 }
 
@@ -397,12 +402,13 @@ body[data-lang="en"] .lang-label-en {
     padding: 1.5rem;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.08);
+    border-left: 4px solid var(--accent-orange);
 }
 
 .stat h3 {
     font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2563eb, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -424,27 +430,27 @@ body[data-lang="en"] .lang-label-en {
     height: 300px;
     border-radius: 20px;
     object-fit: cover;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
     transition: var(--transition);
     border: 3px solid white;
 }
 
 .profile-img:hover {
     transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 30px 50px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 30px 50px rgba(37, 99, 235, 0.4);
 }
 
 .image-placeholder {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2563eb, #f97316);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 5rem;
     color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
 }
 
 /* ============= Projects Section ============= */
@@ -462,20 +468,20 @@ body[data-lang="en"] .lang-label-en {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
     transition: var(--transition);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--gray-light);
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 20px 50px rgba(249, 115, 22, 0.2);
 }
 
 .project-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2563eb, #f97316);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -518,7 +524,7 @@ body[data-lang="en"] .lang-label-en {
 
 .tech-tag {
     background: var(--light-bg);
-    color: var(--primary-color);
+    color: var(--accent-orange);
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -538,12 +544,12 @@ body[data-lang="en"] .lang-label-en {
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 2px solid var(--accent-orange);
+    color: var(--accent-orange);
 }
 
 .project-link:hover {
-    background: var(--primary-color);
+    background: var(--accent-orange);
     color: white;
 }
 
@@ -562,7 +568,7 @@ body[data-lang="en"] .lang-label-en {
 .skill-category h3 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: var(--accent-orange);
 }
 
 .skill-list {
@@ -585,14 +591,14 @@ body[data-lang="en"] .lang-label-en {
 .skill-bar {
     width: 100%;
     height: 8px;
-    background: #e0e0e0;
+    background: var(--gray-light);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(90deg, #2563eb, #f97316);
     border-radius: 10px;
     animation: animateWidth 1.5s ease-out forwards;
 }
@@ -639,7 +645,7 @@ body[data-lang="en"] .lang-label-en {
 
 .contact-method i {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--accent-orange);
     margin-top: 0.5rem;
 }
 
@@ -655,7 +661,7 @@ body[data-lang="en"] .lang-label-en {
 }
 
 .contact-method a:hover {
-    color: var(--primary-color);
+    color: var(--accent-orange);
 }
 
 /* ============= Contact Form ============= */
@@ -683,8 +689,8 @@ body[data-lang="en"] .lang-label-en {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
 }
 
 .contact-form button {
@@ -715,7 +721,7 @@ body[data-lang="en"] .lang-label-en {
 }
 
 .footer-social a:hover {
-    color: var(--primary-color);
+    color: var(--accent-orange);
 }
 
 /* ============= Animations ============= */
