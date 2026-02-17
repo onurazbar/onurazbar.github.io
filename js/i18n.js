@@ -11,6 +11,9 @@ const translations = {
         hero: {
             subtitle: 'Yazılım Mühendisi',
             description: 'Modern ve yaratıcı web çözümleri geliştiririm',
+            developer: 'Yazılım Savaşçısı',
+            engineer: 'Mühendis',
+            creator: 'Kodcu',
             viewProjects: 'Projelerimi Gör',
             contact: 'Bana Ulaş'
         },
@@ -54,8 +57,10 @@ const translations = {
         },
         skills: {
             title: 'Yetenekler',
+            frontend: 'Frontend',
+            backend: 'Backend',
+            tools: 'Araçlar & Diğer',
             programming: 'Programlama Dilleri',
-            tools: 'Araçlar & Teknolojiler',
             responsive: 'Responsive Tasarım',
             uiux: 'UI/UX Tasarım'
         },
@@ -90,6 +95,9 @@ const translations = {
         hero: {
             subtitle: 'Software Engineer',
             description: 'I develop modern and creative web solutions',
+            developer: 'Software Warrior',
+            engineer: 'Engineer',
+            creator: 'Coder',
             viewProjects: 'View My Projects',
             contact: 'Get In Touch'
         },
@@ -133,8 +141,10 @@ const translations = {
         },
         skills: {
             title: 'Skills',
+            frontend: 'Frontend',
+            backend: 'Backend',
+            tools: 'Tools & Others',
             programming: 'Programming Languages',
-            tools: 'Tools & Technologies',
             responsive: 'Responsive Design',
             uiux: 'UI/UX Design'
         },

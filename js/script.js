@@ -276,5 +276,185 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// ============= Creative Animations & Interactions =============
+
+// Floating elements interaction
+const floatingElements = document.querySelectorAll('.hero > div[style*="animation"]');
+floatingElements.forEach((element, index) => {
+    element.addEventListener('click', (e) => {
+        // Add glitch effect on click
+        element.classList.add('glitch-text');
+        element.style.transform = 'scale(1.2)';
+
+        setTimeout(() => {
+            element.classList.remove('glitch-text');
+            element.style.transform = 'scale(1)';
+        }, 300);
+
+        // Create shockwave effect
+        createShockwave(e);
+    });
+
+    // Random emoji reactions on hover
+    element.addEventListener('mouseenter', () => {
+        const reactions = ['🔥', '⚡', '💪', '🎯', '🚀'];
+        const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
+
+        const tooltip = document.createElement('div');
+        tooltip.textContent = randomReaction;
+        tooltip.style.position = 'absolute';
+        tooltip.style.fontSize = '1.5rem';
+        tooltip.style.animation = 'float 0.8s ease-out forwards';
+        tooltip.style.pointerEvents = 'none';
+        document.body.appendChild(tooltip);
+
+        const rect = element.getBoundingClientRect();
+        tooltip.style.left = rect.left + 'px';
+        tooltip.style.top = rect.top + 'px';
+
+        setTimeout(() => tooltip.remove(), 800);
+    });
+});
+
+// Create shockwave effect
+function createShockwave(e) {
+    const shockwave = document.createElement('div');
+    shockwave.className = 'shockwave';
+
+    const rect = e.target.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+
+    shockwave.style.left = x + 'px';
+    shockwave.style.top = y + 'px';
+    document.body.appendChild(shockwave);
+
+    setTimeout(() => shockwave.remove(), 1500);
+}
+
+// Creative badges interaction
+const creativeBadges = document.querySelectorAll('.creative-badge');
+creativeBadges.forEach((badge, index) => {
+    badge.addEventListener('mouseenter', () => {
+        badge.style.transform = 'scale(1.1) rotateZ(5deg)';
+        badge.style.boxShadow = '0 10px 30px rgba(249, 115, 22, 0.4)';
+    });
+
+    badge.addEventListener('mouseleave', () => {
+        badge.style.transform = 'scale(1) rotateZ(0deg)';
+        badge.style.boxShadow = '';
+    });
+
+    badge.addEventListener('click', () => {
+        // Glitch effect on click
+        const oldText = badge.textContent;
+        const emoji = badge.querySelector('span:first-child').textContent;
+        const titles = ['🤖 Yazılım Savaşçısı', '⚙️ Mühendis', '💻 Kodcu'];
+
+        let currentIndex = index % 3;
+        let clickCount = 0;
+
+        const glitchInterval = setInterval(() => {
+            clickCount++;
+            currentIndex = (currentIndex + 1) % 3;
+            badge.textContent = titles[currentIndex];
+
+            if (clickCount > 8) {
+                clearInterval(glitchInterval);
+                badge.textContent = oldText;
+            }
+        }, 100);
+    });
+});
+
+// Buttons animation on hover
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+    button.addEventListener('mouseenter', function() {
+        this.style.filter = 'brightness(1.1) drop-shadow(0 0 15px rgba(249, 115, 22, 0.6))';
+    });
+
+    button.addEventListener('mouseleave', function() {
+        this.style.filter = '';
+    });
+
+    // Sword slash effect on click
+    button.addEventListener('click', function(e) {
+        if (e.target.classList.contains('btn-primary')) {
+            createSwordSlash(e);
+        }
+    });
+});
+
+// Create sword slash effect
+function createSwordSlash(e) {
+    const rect = e.target.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+
+    const slash = document.createElement('div');
+    slash.style.position = 'fixed';
+    slash.style.fontSize = '2rem';
+    slash.style.left = x + 'px';
+    slash.style.top = y + 'px';
+    slash.textContent = '🗡️';
+    slash.className = 'sword-effect';
+    document.body.appendChild(slash);
+
+    setTimeout(() => slash.remove(), 1000);
+}
+
+// Engineer hammer effect on certain elements
+const projectCards = document.querySelectorAll('.project-card');
+projectCards.forEach((card, index) => {
+    card.addEventListener('click', function() {
+        const hammer = document.createElement('div');
+        hammer.style.position = 'fixed';
+        hammer.style.fontSize = '2rem';
+        hammer.style.pointerEvents = 'none';
+        hammer.textContent = '🔨';
+        hammer.className = 'hammer-icon';
+        document.body.appendChild(hammer);
+
+        // Random position around card
+        const rect = this.getBoundingClientRect();
+        const randomX = rect.left + Math.random() * rect.width;
+        const randomY = rect.top + Math.random() * rect.height;
+
+        hammer.style.left = randomX + 'px';
+        hammer.style.top = randomY + 'px';
+
+        setTimeout(() => hammer.remove(), 1000);
+    });
+});
+
+// Terminator eyes effect on hero title
+const heroTitle = document.querySelector('.hero-title');
+if (heroTitle) {
+    heroTitle.addEventListener('mouseenter', function() {
+        this.style.textShadow = '0 0 30px #dc2626, 0 0 50px #f97316';
+        this.style.filter = 'drop-shadow(0 0 20px rgba(220, 38, 38, 0.8))';
+    });
+
+    heroTitle.addEventListener('mouseleave', function() {
+        this.style.textShadow = '';
+        this.style.filter = '';
+    });
+}
+
+// Random "warrior code" messages in console
+const messages = [
+    '🤖 Welcome, Code Warrior!',
+    '⚙️ Engineering mode: ACTIVATED',
+    '💻 Compile, fight, conquer!',
+    '⚡ May the code be with you!',
+    '🗡️ Ready for battle? Deploy!',
+    '🔧 Building the future, one line at a time'
+];
+
+const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+console.log(`%c${randomMessage}`, 'color: #f97316; font-weight: bold; font-size: 14px;');
+console.log('%c⚡ Portfolio loaded with creative animations! ⚡', 'color: #2563eb; font-weight: bold; font-size: 12px;');
+
 console.log('Portfolio website with multi-language support loaded successfully!');
 
