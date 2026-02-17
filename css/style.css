@@ -903,6 +903,39 @@ body[data-lang="en"] .lang-label-en {
     }
 }
 
+/* ============= Moving Vehicles Animation ============= */
+@keyframes moveLeft {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100vw) scaleX(-1);
+    }
+    100% {
+        transform: translateX(100px) scaleX(-1);
+    }
+}
+
+.moving-vehicle {
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.4));
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.moving-vehicle:hover {
+    filter: drop-shadow(0 0 20px rgba(249, 115, 22, 0.8)) brightness(1.2);
+}
+
 /* ============= Creative Elements ============= */
 .creative-badge {
     display: inline-flex;
