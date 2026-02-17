@@ -367,6 +367,83 @@ creativeBadges.forEach((badge, index) => {
     });
 });
 
+// ============= Moving Vehicles Interaction =============
+const movingVehicles = document.querySelectorAll('.moving-vehicle');
+movingVehicles.forEach((vehicle, index) => {
+    vehicle.addEventListener('click', (e) => {
+        // Explosion effect
+        createExplosion(e);
+
+        // Flash effect on vehicle
+        vehicle.style.filter = 'brightness(2) drop-shadow(0 0 30px #f97316)';
+        setTimeout(() => {
+            vehicle.style.filter = 'drop-shadow(0 0 10px rgba(37, 99, 235, 0.4))';
+        }, 300);
+    });
+
+    vehicle.addEventListener('mouseenter', () => {
+        vehicle.style.fontSize = '3.5rem';
+        vehicle.style.filter = 'drop-shadow(0 0 25px rgba(249, 115, 22, 0.9)) brightness(1.3)';
+    });
+
+    vehicle.addEventListener('mouseleave', () => {
+        vehicle.style.fontSize = '3rem';
+        vehicle.style.filter = 'drop-shadow(0 0 10px rgba(37, 99, 235, 0.4))';
+    });
+});
+
+function createExplosion(e) {
+    const explosions = ['💥', '🔥', '⚡', '✨', '🌟'];
+    const randomExplosion = explosions[Math.floor(Math.random() * explosions.length)];
+
+    for (let i = 0; i < 5; i++) {
+        const particle = document.createElement('div');
+        particle.textContent = randomExplosion;
+        particle.style.position = 'fixed';
+        particle.style.fontSize = '2rem';
+        particle.style.pointerEvents = 'none';
+        particle.style.zIndex = '9999';
+
+        const rect = e.target.getBoundingClientRect();
+        particle.style.left = rect.left + 'px';
+        particle.style.top = rect.top + 'px';
+
+        document.body.appendChild(particle);
+
+        // Random direction explosion
+        const angle = (Math.PI * 2 * i) / 5;
+        const velocity = 200;
+        const vx = Math.cos(angle) * velocity;
+        const vy = Math.sin(angle) * velocity;
+
+        let x = rect.left;
+        let y = rect.top;
+        let time = 0;
+        const duration = 1000;
+        const startTime = Date.now();
+
+        const animate = () => {
+            const elapsed = Date.now() - startTime;
+            const progress = elapsed / duration;
+
+            if (progress < 1) {
+                x += vx * 0.016;
+                y += vy * 0.016;
+
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.opacity = 1 - progress;
+
+                requestAnimationFrame(animate);
+            } else {
+                particle.remove();
+            }
+        };
+
+        animate();
+    }
+}
+
 // Buttons animation on hover
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(button => {
