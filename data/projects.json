@@ -6,7 +6,7 @@
       "title_en": "SpaceCraft",
       "description_tr": "Bu, 2 boyutlu bir uzay aracı oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.",
       "description_en": "This is 2D space craft game. Game software is developed via C++ using SFML.",
-      "technologies": ["React", "Node.js", "MongoDB"],
+      "technologies": ["C++", "SFML"],
       "image": "ecommerce.jpg",
       "demoUrl": "#",
       "codeUrl": "https://github.com/onurazbar/SpaceCraft"
