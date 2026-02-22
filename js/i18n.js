@@ -180,7 +180,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const langButtons = document.querySelectorAll('.lang-btn');
     langButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            const lang = e.target.getAttribute('data-lang');
+            // ensure we get the button even if inner img/span was clicked
+            const button = e.target.closest('.lang-btn');
+            if (!button) return;
+            const lang = button.getAttribute('data-lang');
+            if (!lang) return;
             setLanguage(lang);
         });
     });
@@ -237,4 +241,3 @@ function updatePageText(lang) {
 function getNestedValue(obj, path) {
     return path.split('.').reduce((current, prop) => current?.[prop], obj);
 }
-

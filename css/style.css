@@ -33,16 +33,16 @@ body {
 /* ============= Language Switcher ============= */
 .language-switcher {
     position: fixed;
-    top: 75px;
+    top: 55px; /* moved up slightly */
     right: 20px;
     z-index: 2000;
     display: flex;
     align-items: center;
     gap: 12px;
     background: white;
-    padding: 10px 16px;
+    padding: 8px 12px;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.12);
     border: 2px solid var(--gray-light);
 }
 
@@ -50,11 +50,12 @@ body {
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-dark);
     white-space: nowrap;
-    width: 70px;
+    width: 90px;
     min-width: 70px;
+    gap: 8px;
 }
 
 .lang-label-tr {
@@ -74,32 +75,46 @@ body[data-lang="en"] .lang-label-en {
 }
 
 .lang-btn {
-    padding: 6px 10px;
+    padding: 6px 8px;
     border: 2px solid transparent;
     background: transparent;
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     transition: var(--transition);
     color: var(--text-light);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
     line-height: 1;
+    gap: 8px;
+}
+
+.lang-btn .flag {
+    width: 20px;
+    height: 14px;
+    display: inline-block;
+}
+
+.lang-code {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
 }
 
 .lang-btn:hover {
     background: var(--light-bg);
-    transform: scale(1.1);
+    transform: translateY(-2px);
 }
 
 .lang-btn.active {
     background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
-    border-radius: 50%;
-    padding: 8px;
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+    border-radius: 50px;
+    padding: 6px 10px;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+    color: white;
 }
 
 /* ============= Utility Classes ============= */
@@ -846,21 +861,14 @@ body[data-lang="en"] .lang-label-en {
     }
 
     .language-switcher {
-        top: 80px;
-        right: 15px;
-        padding: 8px 12px;
+        top: 65px;
+        right: 12px;
+        padding: 6px 10px;
     }
 
-    .lang-label {
-        font-size: 0.75rem;
-        width: 65px;
-        min-width: 65px;
-    }
-
-    .lang-btn {
-        padding: 5px 8px;
-        font-size: 1rem;
-    }
+    .lang-label { width: 70px; font-size: 0.75rem }
+    .lang-btn .flag { width: 18px; height: 12px }
+    .lang-code { display: inline-block }
 
     .hero-title {
         font-size: 2.5rem;
@@ -938,40 +946,6 @@ body[data-lang="en"] .lang-label-en {
         font-size: 1.5rem;
     }
 
-    .language-switcher {
-        padding: 8px 12px;
-        gap: 10px;
-    }
-
-    .lang-label {
-        font-size: 0.7rem;
-        width: 60px;
-        min-width: 60px;
-    }
-
-    .lang-btn {
-        padding: 4px 6px;
-        font-size: 0.9rem;
-    }
-
-    .profile-img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .project-card {
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    }
+    .language-switcher { top: 64px; right: 10px }
+    .lang-label { display: none }
 }
-
-
-
-
-
-
-
-
-
-
-
-
