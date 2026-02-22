@@ -32,8 +32,8 @@ const translations = {
             demo: 'Demo',
             code: 'Kaynak Kod',
             project1: {
-                title: 'E-Commerce Platformu',
-                description: 'React ve Node.js ile geliştirilmiş tam özellikli e-ticaret platformu. Ödeme entegrasyonu ve admin paneli dahildir.'
+                title: 'SpaceCraft',
+                description: 'Bu, 2 boyutlu bir uzay aracı oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.'
             },
             project2: {
                 title: 'Mobil Uygulama',
@@ -117,8 +117,8 @@ const translations = {
             demo: 'Demo',
             code: 'Source Code',
             project1: {
-                title: 'E-Commerce Platform',
-                description: 'A full-featured e-commerce platform developed with React and Node.js. Includes payment integration and admin panel.'
+                title: 'SpaceCraft',
+                description: 'This is 2D space craft game. Game software is developed via C++ using SFML.'
             },
             project2: {
                 title: 'Mobile Application',
