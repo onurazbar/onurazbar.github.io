@@ -14,7 +14,8 @@ const translations = {
             engineer: 'Mühendis',
             creator: 'Kodcu',
             viewProjects: 'Projelerimi Gör',
-            contact: 'Bana Ulaş'
+            contact: 'Bana Ulaş',
+            downloadCv: 'CV İndir'
         },
         about: {
             title: 'Hakkında',
@@ -97,7 +98,8 @@ const translations = {
             engineer: 'Engineer',
             creator: 'Coder',
             viewProjects: 'View My Projects',
-            contact: 'Get In Touch'
+            contact: 'Get In Touch',
+            downloadCv: 'Download CV'
         },
         about: {
             title: 'About',
