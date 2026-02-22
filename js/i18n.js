@@ -10,7 +10,6 @@ const translations = {
         },
         hero: {
             subtitle: 'Yazılım Mühendisi',
-            description: 'Modern ve yaratıcı web çözümleri geliştiririm',
             developer: 'Yazılım Savaşçısı',
             engineer: 'Mühendis',
             creator: 'Kodcu',
@@ -94,7 +93,6 @@ const translations = {
         },
         hero: {
             subtitle: 'Software Engineer',
-            description: 'I develop modern and creative web solutions',
             developer: 'Software Warrior',
             engineer: 'Engineer',
             creator: 'Coder',

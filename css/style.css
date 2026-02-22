@@ -326,13 +326,6 @@ body[data-lang="en"] .lang-label-en {
     animation: slideInUp 0.8s ease-out 0.2s both;
 }
 
-.hero-description {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
-    animation: slideInUp 0.8s ease-out 0.3s both;
-}
-
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
