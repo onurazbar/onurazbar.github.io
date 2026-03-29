@@ -29,7 +29,6 @@ const translations = {
         },
         projects: {
             title: 'Projeler',
-            demo: 'Demo',
             code: 'Kaynak Kod',
             project1: {
                 title: 'SpaceCraft',
@@ -114,7 +113,6 @@ const translations = {
         },
         projects: {
             title: 'Projects',
-            demo: 'Demo',
             code: 'Source Code',
             project1: {
                 title: 'SpaceCraft',

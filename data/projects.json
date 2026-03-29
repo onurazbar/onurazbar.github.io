@@ -8,7 +8,6 @@
       "description_en": "This is 2D space craft game. Game software is developed via C++ using SFML.",
       "technologies": ["C++", "SFML"],
       "image": "ecommerce.jpg",
-      "demoUrl": "#",
       "codeUrl": "https://github.com/onurazbar/SpaceCraft"
     },
     {
@@ -19,7 +18,6 @@
       "description_en": "Cross-platform mobile application developed with Flutter. Optimized for iOS and Android.",
       "technologies": ["Flutter", "Dart", "Firebase"],
       "image": "mobile.jpg",
-      "demoUrl": "#",
       "codeUrl": "#"
     },
     {
@@ -30,7 +28,6 @@
       "description_en": "Interactive data visualization dashboard created with Python and D3.js.",
       "technologies": ["Python", "D3.js", "Flask"],
       "image": "dashboard.jpg",
-      "demoUrl": "#",
       "codeUrl": "#"
     },
     {
@@ -41,7 +38,6 @@
       "description_en": "Cloud-based file storage system developed with Vue.js and AWS S3.",
       "technologies": ["Vue.js", "AWS", "Express"],
       "image": "cloud.jpg",
-      "demoUrl": "#",
       "codeUrl": "#"
     },
     {
@@ -52,7 +48,6 @@
       "description_en": "Modern social media platform developed with Next.js and PostgreSQL. Includes real-time features.",
       "technologies": ["Next.js", "PostgreSQL", "WebSocket"],
       "image": "social.jpg",
-      "demoUrl": "#",
       "codeUrl": "#"
     },
     {
@@ -63,7 +58,6 @@
       "description_en": "Fun web-based game developed with JavaScript and Canvas API.",
       "technologies": ["JavaScript", "Canvas", "Phaser"],
       "image": "game.jpg",
-      "demoUrl": "#",
       "codeUrl": "#"
     }
   ]
