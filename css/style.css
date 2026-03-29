@@ -496,6 +496,12 @@ body[data-lang="en"] .lang-label-en {
     position: relative;
 }
 
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .image-placeholder-project {
     font-size: 3rem;
     color: rgba(255, 255, 255, 0.7);
