@@ -51,6 +51,9 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// EmailJS initialization
+emailjs.init('HdMzC0ioZwDg9uok2');
+
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
@@ -75,19 +78,25 @@ if (contactForm) {
             return;
         }
 
-        // Simulate form submission
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Gönderiliyor...';
         submitBtn.disabled = true;
 
-        // Simulate API call
-        setTimeout(() => {
-            showNotification('Mesajınız başarıyla gönderildi! Teşekkür ederiz.', 'success');
+        emailjs.send('service_s4dmrad', 'template_8p16eie', {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+        }).then(() => {
+            showNotification('Mesajınız başarıyla gönderildi! Teşekkür ederim.', 'success');
             contactForm.reset();
+        }).catch(() => {
+            showNotification('Mesaj gönderilemedi. Lütfen tekrar deneyiniz.', 'error');
+        }).finally(() => {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        });
     });
 }
 
