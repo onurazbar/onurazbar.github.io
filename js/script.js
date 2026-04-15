@@ -83,9 +83,9 @@ if (contactForm) {
         submitBtn.textContent = 'Gönderiliyor...';
         submitBtn.disabled = true;
 
-        emailjs.send('service_s4dmrad', 'template_8p16eie', {
-            from_name: name,
-            from_email: email,
+        emailjs.send('service_s4dmrad', 'template_wb9lis4', {
+            name: name,
+            email: email,
             subject: subject,
             message: message,
         }).then(() => {
