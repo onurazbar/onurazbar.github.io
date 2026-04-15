@@ -82,6 +82,13 @@ const translations = {
         },
         footer: {
             copyright: '© 2026 Onur Azbar. Tüm Hakları Saklıdır.'
+        },
+        notifications: {
+            fillAll: 'Lütfen tüm alanları doldurunuz!',
+            invalidEmail: 'Lütfen geçerli bir email adresi giriniz!',
+            success: 'Mesajınız başarıyla gönderildi! Teşekkür ederim.',
+            error: 'Mesaj gönderilemedi. Lütfen tekrar deneyiniz.',
+            sending: 'Gönderiliyor...'
         }
     },
     en: {
@@ -166,6 +173,13 @@ const translations = {
         },
         footer: {
             copyright: '© 2026 Onur Azbar. All Rights Reserved.'
+        },
+        notifications: {
+            fillAll: 'Please fill in all fields!',
+            invalidEmail: 'Please enter a valid email address!',
+            success: 'Your message has been sent successfully! Thank you.',
+            error: 'Message could not be sent. Please try again.',
+            sending: 'Sending...'
         }
     }
 };

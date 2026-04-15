@@ -60,6 +60,9 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
+        const lang = localStorage.getItem('language') || 'tr';
+        const n = translations[lang].notifications;
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
@@ -67,20 +70,20 @@ if (contactForm) {
 
         // Validate form
         if (!name || !email || !subject || !message) {
-            showNotification('Lütfen tüm alanları doldurunuz!', 'error');
+            showNotification(n.fillAll, 'error');
             return;
         }
 
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            showNotification('Lütfen geçerli bir email adresi giriniz!', 'error');
+            showNotification(n.invalidEmail, 'error');
             return;
         }
 
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Gönderiliyor...';
+        submitBtn.textContent = n.sending;
         submitBtn.disabled = true;
 
         emailjs.send('service_s4dmrad', 'template_wb9lis4', {
@@ -89,10 +92,10 @@ if (contactForm) {
             subject: subject,
             message: message,
         }).then(() => {
-            showNotification('Mesajınız başarıyla gönderildi! Teşekkür ederim.', 'success');
+            showNotification(n.success, 'success');
             contactForm.reset();
         }).catch(() => {
-            showNotification('Mesaj gönderilemedi. Lütfen tekrar deneyiniz.', 'error');
+            showNotification(n.error, 'error');
         }).finally(() => {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
