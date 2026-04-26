@@ -33,7 +33,7 @@ const translations = {
             },
             project2: {
                 title: 'Snake',
-                description: 'This is 2D snake game. Game software is developed via C++ using SFML.'
+                description: 'Bu, 2 boyutlu bir yılan oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.'
             },
             project3: {
                 title: 'Veri Analiz Paneli',
