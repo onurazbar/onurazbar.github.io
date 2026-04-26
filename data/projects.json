@@ -12,13 +12,13 @@
     },
     {
       "id": 2,
-      "title_tr": "Mobil Uygulama",
-      "title_en": "Mobile Application",
-      "description_tr": "Flutter ile geliştirilen çapraz platform mobil uygulama. iOS ve Android için optimize edilmiş.",
-      "description_en": "Cross-platform mobile application developed with Flutter. Optimized for iOS and Android.",
-      "technologies": ["Flutter", "Dart", "Firebase"],
-      "image": "mobile.jpg",
-      "codeUrl": "#"
+      "title_tr": "Snake",
+      "title_en": "Snake",
+      "description_tr": "Bu, 2 boyutlu bir yılan oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.",
+      "description_en": "This is 2D space craft game. Game software is developed via C++ using SFML.",
+      "technologies": ["C++", "SFML"],
+      "image": "snake.jpg",
+      "codeUrl": "https://github.com/onurazbar/Snake"
     },
     {
       "id": 3,

@@ -32,8 +32,8 @@ const translations = {
                 description: 'Bu, 2 boyutlu bir uzay aracı oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.'
             },
             project2: {
-                title: 'Mobil Uygulama',
-                description: 'Flutter ile geliştirilen çapraz platform mobil uygulama. iOS ve Android için optimize edilmiş.'
+                title: 'Snake',
+                description: 'This is 2D snake game. Game software is developed via C++ using SFML.'
             },
             project3: {
                 title: 'Veri Analiz Paneli',
@@ -120,8 +120,8 @@ const translations = {
                 description: 'This is 2D space craft game. Game software is developed via C++ using SFML.'
             },
             project2: {
-                title: 'Mobile Application',
-                description: 'Cross-platform mobile application developed with Flutter. Optimized for iOS and Android.'
+                title: 'Snake',
+                description: 'This is 2D snake game. Game software is developed via C++ using SFML.'
             },
             project3: {
                 title: 'Data Analysis Dashboard',
