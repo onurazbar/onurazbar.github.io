@@ -23,9 +23,6 @@ const translations = {
             text2: 'Şu anda büyük veri sistemleri için bulut servisleri üzerinde çalışıyorum. Bu süreçte sistem mimarisi tasarımı, performans iyileştirme, dağıtık sistemlerin güvenilirliğini artırma ve modern veri altyapılarına katkı sağlama konularına odaklanıyorum.',
             text3: 'Kariyerimin önceki dönemlerinde backend geliştirme deneyimi edindim ve uzun süre gömülü yazılım alanında çalıştım. Bu geçmişim, sistem seviyesinde düşünme, performans optimizasyonu ve kaynak verimli tasarım konularında güçlü bir bakış açısı kazanmamı sağladı. Bugün hâlâ yazılım geliştirirken bu yaklaşım benim için önemli bir temel oluşturuyor.',
             text4: 'Karmaşık teknik problemleri çözmekten, ölçeklenebilir mimariler tasarlamaktan ve yeni teknolojiler öğrenmekten keyif alıyorum. Temiz tasarımı, pratik çözümleri ve sürdürülebilir yazılım geliştirme anlayışını önemsiyorum.',
-            projects: 'Tamamlanan Proje',
-            clients: 'Memnun Müşteri',
-            experience: 'Yıl Deneyim'
         },
         projects: {
             title: 'Projeler',
@@ -114,9 +111,6 @@ const translations = {
             text2: 'Currently, I work on cloud services for big data platforms, focusing on system architecture, performance and large scale data processing. My work involves designing backend components, improving distributed system reliability and contributing to modern data infrastructure solutions.',
             text3: 'Earlier in my career, I gained strong experience in backend development and spent several years working in embedded software. This background helped me develop a deep understanding of system level programming, performance optimization and resource efficient design. These skills continue to influence how I approach software today.',
             text4: 'I enjoy solving complex technical problems, working on scalable architectures and continuously learning new technologies. I value clean design, practical solutions and building software that is both robust and maintainable.',
-            projects: 'Projects Completed',
-            clients: 'Happy Clients',
-            experience: 'Years Experience'
         },
         projects: {
             title: 'Projects',
