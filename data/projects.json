@@ -17,7 +17,7 @@
       "description_tr": "Bu, 2 boyutlu bir yılan oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.",
       "description_en": "This is 2D space craft game. Game software is developed via C++ using SFML.",
       "technologies": ["C++", "SFML"],
-      "image": "snake.jpg",
+      "image": "snake.png",
       "codeUrl": "https://github.com/onurazbar/Snake"
     },
     {
