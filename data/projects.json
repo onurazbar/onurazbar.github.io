@@ -22,13 +22,13 @@
     },
     {
       "id": 3,
-      "title_tr": "Veri Analiz Paneli",
-      "title_en": "Data Analysis Dashboard",
-      "description_tr": "Python ve D3.js kullanarak oluşturulmuş interaktif veri görselleştirme paneli.",
-      "description_en": "Interactive data visualization dashboard created with Python and D3.js.",
-      "technologies": ["Python", "D3.js", "Flask"],
-      "image": "dashboard.jpg",
-      "codeUrl": "#"
+      "title_tr": "BackGammon",
+      "title_en": "BackGammon",
+      "description_tr": "Bu, 2 boyutlu bir tavla konsol oyunudur. Oyun yazılımı, C++ dili ile geliştirilmiştir.",
+      "description_en": "This is a 2D backgammon console game. The game software was developed using the C++ language.",
+      "technologies": ["C++"],
+      "image": "backgammon.png",
+      "codeUrl": "https://github.com/onurazbar/BackGammon"
     },
     {
       "id": 4,

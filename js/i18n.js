@@ -36,8 +36,8 @@ const translations = {
                 description: 'Bu, 2 boyutlu bir yılan oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.'
             },
             project3: {
-                title: 'Veri Analiz Paneli',
-                description: 'Python ve D3.js kullanarak oluşturulmuş interaktif veri görselleştirme paneli.'
+                title: 'BackGammon',
+                description: 'Bu, 2 boyutlu bir tavla konsol oyunudur. Oyun yazılımı, C++ dili ile geliştirilmiştir.'
             },
             project4: {
                 title: 'Bulut Depolama Uygulaması',
@@ -124,8 +124,8 @@ const translations = {
                 description: 'This is 2D snake game. Game software is developed via C++ using SFML.'
             },
             project3: {
-                title: 'Data Analysis Dashboard',
-                description: 'Interactive data visualization dashboard created with Python and D3.js.'
+                title: 'BackGammon',
+                description: 'This is a 2D backgammon console game. The game software was developed using the C++ language.'
             },
             project4: {
                 title: 'Cloud Storage Application',
