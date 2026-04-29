@@ -40,8 +40,8 @@ const translations = {
                 description: 'Bu, 2 boyutlu bir tavla konsol oyunudur. Oyun yazılımı, C++ dili ile geliştirilmiştir.'
             },
             project4: {
-                title: 'Bulut Depolama Uygulaması',
-                description: 'Vue.js ve AWS S3 ile geliştirilmiş bulut tabanlı dosya depolama sistemi.'
+                title: 'RayTracer',
+                description: 'Bu, konsol tabanlı basit bir ışın izleme uygulamasıdır. Kaynak kodu, nesne yönelimli mimaride C++ ile yazılmıştır.'
             },
             project5: {
                 title: 'Sosyal Medya Uygulaması',
@@ -128,8 +128,8 @@ const translations = {
                 description: 'This is a 2D backgammon console game. The game software was developed using the C++ language.'
             },
             project4: {
-                title: 'Cloud Storage Application',
-                description: 'Cloud-based file storage system developed with Vue.js and AWS S3.'
+                title: 'RayTracer',
+                description: 'This is a console based simple ray tracer application. The source code is written via C++ upon an object oriented concept.'
             },
             project5: {
                 title: 'Social Media Application',
