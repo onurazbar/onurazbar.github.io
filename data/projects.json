@@ -42,16 +42,6 @@
     },
     {
       "id": 5,
-      "title_tr": "Sosyal Medya Uygulaması",
-      "title_en": "Social Media Application",
-      "description_tr": "Next.js ve PostgreSQL ile geliştirilmiş modern sosyal medya platformu. Real-time özellikler içerir.",
-      "description_en": "Modern social media platform developed with Next.js and PostgreSQL. Includes real-time features.",
-      "technologies": ["Next.js", "PostgreSQL", "WebSocket"],
-      "image": "social.jpg",
-      "codeUrl": "#"
-    },
-    {
-      "id": 6,
       "title_tr": "İnteraktif Oyun",
       "title_en": "Interactive Game",
       "description_tr": "JavaScript ve Canvas API kullanarak geliştirilmiş eğlenceli web tabanlı oyun.",

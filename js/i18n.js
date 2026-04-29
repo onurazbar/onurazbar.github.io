@@ -44,10 +44,6 @@ const translations = {
                 description: 'Bu, konsol tabanlı basit bir ışın izleme uygulamasıdır. Kaynak kodu, nesne yönelimli mimaride C++ ile yazılmıştır.'
             },
             project5: {
-                title: 'Sosyal Medya Uygulaması',
-                description: 'Next.js ve PostgreSQL ile geliştirilmiş modern sosyal medya platformu. Real-time özellikler içerir.'
-            },
-            project6: {
                 title: 'İnteraktif Oyun',
                 description: 'JavaScript ve Canvas API kullanarak geliştirilmiş eğlenceli web tabanlı oyun.'
             }
@@ -132,10 +128,6 @@ const translations = {
                 description: 'This is a console based simple ray tracer application. The source code is written via C++ upon an object oriented concept.'
             },
             project5: {
-                title: 'Social Media Application',
-                description: 'Modern social media platform developed with Next.js and PostgreSQL. Includes real-time features.'
-            },
-            project6: {
                 title: 'Interactive Game',
                 description: 'Fun web-based game developed with JavaScript and Canvas API.'
             }
