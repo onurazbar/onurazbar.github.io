@@ -43,10 +43,6 @@ const translations = {
                 title: 'RayTracer',
                 description: 'Bu, konsol tabanlı basit bir ışın izleme uygulamasıdır. Kaynak kodu, nesne yönelimli mimaride C++ ile yazılmıştır.'
             },
-            project5: {
-                title: 'İnteraktif Oyun',
-                description: 'JavaScript ve Canvas API kullanarak geliştirilmiş eğlenceli web tabanlı oyun.'
-            }
         },
         skills: {
             title: 'Yetenekler',
@@ -127,10 +123,6 @@ const translations = {
                 title: 'RayTracer',
                 description: 'This is a console based simple ray tracer application. The source code is written via C++ upon an object oriented concept.'
             },
-            project5: {
-                title: 'Interactive Game',
-                description: 'Fun web-based game developed with JavaScript and Canvas API.'
-            }
         },
         skills: {
             title: 'Skills',

@@ -40,15 +40,5 @@
       "image": "raytracer.png",
       "codeUrl": "https://github.com/onurazbar/RayTracer"
     },
-    {
-      "id": 5,
-      "title_tr": "İnteraktif Oyun",
-      "title_en": "Interactive Game",
-      "description_tr": "JavaScript ve Canvas API kullanarak geliştirilmiş eğlenceli web tabanlı oyun.",
-      "description_en": "Fun web-based game developed with JavaScript and Canvas API.",
-      "technologies": ["JavaScript", "Canvas", "Phaser"],
-      "image": "game.jpg",
-      "codeUrl": "#"
-    }
   ]
 }
