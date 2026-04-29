@@ -46,12 +46,8 @@ const translations = {
         },
         skills: {
             title: 'Yetenekler',
-            frontend: 'Frontend',
-            backend: 'Backend',
-            tools: 'Araçlar & Diğer',
             programming: 'Programlama Dilleri',
-            responsive: 'Responsive Tasarım',
-            uiux: 'UI/UX Tasarım'
+            tools: 'Araçlar & Teknolojiler'
         },
         contact: {
             title: 'İletişim',
@@ -126,12 +122,8 @@ const translations = {
         },
         skills: {
             title: 'Skills',
-            frontend: 'Frontend',
-            backend: 'Backend',
-            tools: 'Tools & Others',
             programming: 'Programming Languages',
-            responsive: 'Responsive Design',
-            uiux: 'UI/UX Design'
+            tools: 'Tools & Technologies'
         },
         contact: {
             title: 'Contact',
