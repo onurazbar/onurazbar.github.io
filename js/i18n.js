@@ -54,7 +54,6 @@ const translations = {
             heading: 'Benimle İletişime Geçin',
             description: 'Bir proje hakkında konuşmak veya soru sormak ister misiniz? Aşağıdaki yöntemlerle bana ulaşabilirsiniz.',
             email: 'Email',
-            phone: 'Telefon',
             address: 'Adres',
             city: 'İzmir, Türkiye',
             form: {
@@ -130,7 +129,6 @@ const translations = {
             heading: 'Get In Touch',
             description: 'Want to talk about a project or ask a question? You can reach me through the methods below.',
             email: 'Email',
-            phone: 'Phone',
             address: 'Address',
             city: 'Izmir, Turkey',
             form: {
