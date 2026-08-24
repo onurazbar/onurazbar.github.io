@@ -3,338 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Onur Azbar - Portfolio">
+    <meta name="description" content="Onur Azbar - Software Engineer. Cloud services, big data systems, distributed architectures.">
+    <meta name="theme-color" content="#0b0d17">
     <title>Onur Azbar - Portfolio</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body data-lang="tr">
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <div class="lang-label">
-            <span class="lang-label-tr">Dil</span>
-            <span class="lang-label-en">Language</span>
-        </div>
-        <button class="lang-btn active" data-lang="tr" title="Türkçe" aria-label="Türkçe">
-            <img src="images/flags/tr.svg" alt="TR" class="flag">
-            <span class="lang-code">TR</span>
-        </button>
-        <button class="lang-btn" data-lang="en" title="English" aria-label="English">
-            <img src="images/flags/en.svg" alt="EN" class="flag">
-            <span class="lang-code">EN</span>
-        </button>
+
+    <!-- ============ Deep space backdrop ============ -->
+    <div class="space-backdrop" aria-hidden="true">
+        <canvas id="starfield"></canvas>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="grid-veil"></div>
+        <div class="vignette"></div>
     </div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="#home">OA</a>
-                </div>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" data-i18n="nav.home">Anasayfa</a></li>
-                    <li><a href="#about" data-i18n="nav.about">Hakkında</a></li>
-                    <li><a href="#projects" data-i18n="nav.projects">Projeler</a></li>
-                    <li><a href="#skills" data-i18n="nav.skills">Yetenekler</a></li>
-                    <li><a href="#contact" data-i18n="nav.contact">İletişim</a></li>
+    <!-- ============ HUD Top Bar ============ -->
+    <header class="hud-bar" id="hudBar">
+        <div class="container hud-inner">
+            <a href="#home" class="hud-brand">
+                <i class="fa-solid fa-terminal"></i>
+                <span class="brand-name">OA_SYSTEM</span><span class="brand-ver">.v1</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu" aria-label="Main">
+                <ul>
+                    <li><a href="#home"><span class="nav-idx">01</span><span data-i18n="nav.home">Anasayfa</span></a></li>
+                    <li><a href="#about"><span class="nav-idx">02</span><span data-i18n="nav.about">Hakkında</span></a></li>
+                    <li><a href="#projects"><span class="nav-idx">03</span><span data-i18n="nav.projects">Projeler</span></a></li>
+                    <li><a href="#skills"><span class="nav-idx">04</span><span data-i18n="nav.skills">Yetenekler</span></a></li>
+                    <li><a href="#contact"><span class="nav-idx">05</span><span data-i18n="nav.contact">İletişim</span></a></li>
                 </ul>
+            </nav>
+
+            <div class="hud-actions">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="tr" title="Türkçe" aria-label="Türkçe">
+                        <img src="images/flags/tr.svg" alt="" class="flag">
+                        <span class="lang-code">TR</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en" title="English" aria-label="English">
+                        <img src="images/flags/en.svg" alt="" class="flag">
+                        <span class="lang-code">EN</span>
+                    </button>
+                </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
+    <main>
+
+    <!-- ============ Hero / Mission Control ============ -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
+        <div class="container hero-grid">
+
+            <div class="hero-main">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span data-i18n="hud.systemOnline">SİSTEM AKTİF</span>
+                </div>
+
+                <p class="hero-boot">
+                    <span class="prompt">&gt;</span>
+                    <span id="typewriter" class="typewriter"></span><span class="caret"></span>
+                </p>
+
                 <h1 class="hero-title">Onur Azbar</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Yazılım Mühendisi</p>
 
-                <!-- Dancing Robots -->
-                <div class="dancing-robots">
-                    <div class="dancing-robot" style="animation-delay: 0s;">🤖</div>
-                    <div class="dancing-robot" style="animation-delay: 0.2s;">🤖</div>
-                    <div class="dancing-robot" style="animation-delay: 0.4s;">🤖</div>
-                </div>
+                <p class="hero-bio" data-i18n="hero.bio">Bulut servisleri ve büyük veri sistemleri üzerine çalışan, havacılık hassasiyetini yazılım mühendisliğiyle birleştiren bir mühendis.</p>
 
-                <p class="hero-subtitle" data-i18n="hero.subtitle">Yazılım Geliştirici & Web Designer</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">Projelerimi Gör</a>
-                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.contact">Bana Ulaş</a>
-                    <!-- CV download button -->
-                    <a href="assets/Onur_Azbar_CV.pdf" class="btn btn-secondary" download="Onur_Azbar_CV.pdf" id="downloadCvBtn" data-i18n="hero.downloadCv">CV İndir</a>
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket"></i>
+                        <span data-i18n="hero.viewProjects">Projelerimi Gör</span>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                        <span data-i18n="hero.contact">Bana Ulaş</span>
+                    </a>
+                    <a href="assets/Onur_Azbar_CV.pdf" class="btn btn-ghost" download="Onur_Azbar_CV.pdf" id="downloadCvBtn">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span data-i18n="hero.downloadCv">CV İndir</span>
+                    </a>
                 </div>
+
                 <div class="social-links">
-                    <a href="https://github.com/onurazbar" target="_blank" title="GitHub">
+                    <a href="https://github.com/onurazbar" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/onur-azbar/" target="_blank" title="LinkedIn">
+                    <a href="https://linkedin.com/in/onur-azbar/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" title="Twitter">
-                        <i class="fab fa-twitter"></i>
+                    <a href="mailto:onurazbar@gmail.com" title="Email" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
                     </a>
                 </div>
             </div>
+
+            <aside class="hero-hud">
+                <div class="craft-frame">
+                    <img src="images/space/spacecraft.webp" alt="" width="880" height="880" class="craft-img" fetchpriority="high">
+                    <span class="frame-tag">FIG 1.0 // ORBITAL_EXPLORER</span>
+                </div>
+
+                <div class="hud-panel">
+                    <p class="panel-label" data-i18n="hud.experience">DENEYİM</p>
+                    <p class="panel-value"><span class="counter" data-target="10">10</span><span class="panel-unit">+</span></p>
+                    <div class="gauge"><div class="gauge-fill" style="width:92%"></div></div>
+                    <p class="panel-note" data-i18n="hud.experienceNote">yıl saha görevi</p>
+                </div>
+
+                <div class="hud-panel">
+                    <p class="panel-label" data-i18n="hud.activeModules">AKTİF MODÜLLER</p>
+                    <div class="chip-row">
+                        <span class="chip">Java</span>
+                        <span class="chip">C/C++</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">Spring</span>
+                        <span class="chip">Cloud</span>
+                    </div>
+                </div>
+            </aside>
         </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
+
+        <a href="#about" class="scroll-indicator" aria-label="Scroll">
+            <span class="scroll-dot"></span>
+        </a>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- ============ About / System Log ============ -->
+    <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title" data-i18n="about.title">Hakkında</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p data-i18n="about.text1">Merhaba! Ben Onur Azbar, 10 yılı aşkın süredir farklı alanlarda güvenilir ve ölçeklenebilir sistemler geliştiren bir yazılım mühendisiyim.</p>
-                    <p data-i18n="about.text2">Şuanda büyük veri sistemleri için bulut servisleri üzerinde çalışıyorum. Bu süreçte sistem mimarisi tasarımı, performans iyileştirme, dağıtık sistemlerin güvenilirliğini artırma ve modern veri altyapılarına katkı sağlama konularına odaklanıyorum.</p>
-                    <p data-i18n="about.text3">Kariyerimin önceki dönemlerinde backend geliştirme deneyimi edindim ve uzun süre gömülü yazılım alanında çalıştım. Bu geçmişim, sistem seviyesinde düşünme, performans optimizasyonu ve kaynak verimli tasarım konularında güçlü bir bakış açısı kazanmamı sağladı. Bugün hâlâ yazılım geliştirirken bu yaklaşım benim için önemli bir temel oluşturuyor.</p>
-                    <p data-i18n="about.text4">Karmaşık teknik problemleri çözmekten, ölçeklenebilir mimariler tasarlamaktan ve yeni teknolojiler öğrenmekten keyif alıyorum. Temiz tasarımı, pratik çözümleri ve sürdürülebilir yazılım geliştirme anlayışını önemsiyorum.</p>
+            <header class="section-head">
+                <span class="section-eyebrow">// SYSTEM_LOG</span>
+                <h2 class="section-title" data-i18n="about.title">Hakkında</h2>
+                <p class="section-sub" data-i18n="about.lead">Havacılık disiplinini yazılım mimarisine taşıyan bir kariyer kaydı.</p>
+            </header>
+
+            <div class="about-grid">
+                <div class="about-log flight-path">
+                    <article class="log-entry glass">
+                        <span class="log-id">LOG_01</span>
+                        <p data-i18n="about.text1">Merhaba! Ben Onur Azbar, 10 yılı aşkın süredir farklı alanlarda güvenilir ve ölçeklenebilir sistemler geliştiren bir yazılım mühendisiyim.</p>
+                    </article>
+                    <article class="log-entry glass">
+                        <span class="log-id">LOG_02</span>
+                        <p data-i18n="about.text2">Şu anda büyük veri sistemleri için bulut servisleri üzerinde çalışıyorum.</p>
+                    </article>
+                    <article class="log-entry glass">
+                        <span class="log-id">LOG_03</span>
+                        <p data-i18n="about.text3">Kariyerimin önceki dönemlerinde backend geliştirme deneyimi edindim ve uzun süre gömülü yazılım alanında çalıştım.</p>
+                    </article>
+                    <article class="log-entry glass">
+                        <span class="log-id">LOG_04</span>
+                        <p data-i18n="about.text4">Karmaşık teknik problemleri çözmekten ve ölçeklenebilir mimariler tasarlamaktan keyif alıyorum.</p>
+                    </article>
                 </div>
-                <div class="about-image">
-                    <img src="images/profile.jpg" alt="Onur Azbar" class="profile-img">
+
+                <div class="about-side">
+                    <figure class="portrait-frame glass">
+                        <div class="portrait-corners"></div>
+                        <img src="images/profile.webp" alt="Onur Azbar" class="profile-img" loading="lazy" width="560" height="560">
+                        <figcaption>
+                            <span class="portrait-name">ONUR AZBAR</span>
+                            <span class="portrait-role" data-i18n="about.badge">YAZILIM MÜHENDİSİ</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="eva-frame">
+                        <img src="images/space/astronaut.webp" alt="" loading="lazy" width="760" height="760">
+                        <figcaption class="frame-tag">FIG 2.0 // EVA_OPERATIONS</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- ============ Projects / Hangar ============ -->
+    <section id="projects" class="section projects">
         <div class="container">
-            <h2 class="section-title" data-i18n="projects.title">Projeler</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/spacecraft.png" alt="SpaceCraft" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="image-placeholder-project" style="display: none;">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 data-i18n="projects.project1.title">SpaceCraft</h3>
-                        <p data-i18n="projects.project1.description">Bu, 2 boyutlu bir uzay aracı oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">SFML</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/onurazbar/SpaceCraft" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
-                        </div>
-                    </div>
-                </div>
+            <header class="section-head">
+                <span class="section-eyebrow">// HANGAR</span>
+                <h2 class="section-title" data-i18n="projects.title">Projeler</h2>
+                <p class="section-sub">
+                    <span class="boot-line">&gt; loading modules...</span>
+                    <span class="boot-ok">[OK]</span>
+                </p>
+            </header>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/snake.png" alt="Snake" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="image-placeholder-project" style="display: none;">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 data-i18n="projects.project2.title">Snake</h3>
-                        <p data-i18n="projects.project2.description">Bu, 2 boyutlu bir yılan oyunudur. Oyun yazılımı, C++ dili kullanılarak SFML kütüphanesi ile geliştirilmiştir.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">SFML</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/onurazbar/Snake" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/backgammon.png" alt="BackGammon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="image-placeholder-project" style="display: none;">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 data-i18n="projects.project3.title">BackGammon</h3>
-                        <p data-i18n="projects.project3.description">Bu, 2 boyutlu bir tavla konsol oyunudur. Oyun yazılımı, C++ dili ile geliştirilmiştir.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/onurazbar/BackGammon" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/raytracer.png" alt="RayTracer" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="image-placeholder-project" style="display: none;">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 data-i18n="projects.project4.title">RayTracer</h3>
-                        <p data-i18n="projects.project4.description">Bu, konsol tabanlı basit bir ışın izleme uygulamasıdır. Kaynak kodu, nesne yönelimli mimaride C++ ile yazılmıştır.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/onurazbar/RayTracer" class="project-link" data-i18n="projects.code">Kaynak Kod</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <!-- Cards are rendered from js/projects.js -->
+            <div class="projects-grid" id="projectsGrid"></div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- ============ Skills / Avionics ============ -->
+    <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title" data-i18n="skills.title">Yetenekler</h2>
+            <header class="section-head">
+                <span class="section-eyebrow">// AVIONICS_STACK</span>
+                <h2 class="section-title" data-i18n="skills.title">Yetenekler</h2>
+            </header>
+
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 data-i18n="skills.programming">Programlama Dilleri</h3>
+                <div class="skill-category glass">
+                    <h3 class="skill-heading">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span data-i18n="skills.programming">Programlama Dilleri</span>
+                    </h3>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-top"><span class="skill-name">Java</span><span class="skill-pct">90%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">C/C++</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
+                        <div class="skill-item" data-level="88">
+                            <div class="skill-top"><span class="skill-name">C/C++</span><span class="skill-pct">88%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 82%"></div>
-                            </div>
+                        <div class="skill-item" data-level="82">
+                            <div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">82%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3 data-i18n="skills.tools">Araçlar & Teknolojiler</h3>
+                <div class="skill-category glass">
+                    <h3 class="skill-heading">
+                        <i class="fa-solid fa-satellite"></i>
+                        <span data-i18n="skills.tools">Araçlar & Teknolojiler</span>
+                    </h3>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Huawei Cloud</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-top"><span class="skill-name">Huawei Cloud</span><span class="skill-pct">80%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Spring</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-top"><span class="skill-name">Spring</span><span class="skill-pct">85%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JIRA Issue Tracking System</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
+                        <div class="skill-item" data-level="88">
+                            <div class="skill-top"><span class="skill-name">JIRA</span><span class="skill-pct">88%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Linux / Bash</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-top"><span class="skill-name">Linux / Bash</span><span class="skill-pct">85%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Subversion (SVN) / Git</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-top"><span class="skill-name">SVN / Git</span><span class="skill-pct">90%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">SQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-top"><span class="skill-name">SQL</span><span class="skill-pct">85%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">REST APIs</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
+                        <div class="skill-item" data-level="88">
+                            <div class="skill-top"><span class="skill-name">REST APIs</span><span class="skill-pct">88%</span></div>
+                            <div class="gauge"><div class="gauge-fill"></div></div>
                         </div>
                     </div>
                 </div>
+
+                <figure class="sat-frame">
+                    <img src="images/space/satellite.webp" alt="" loading="lazy" width="760" height="760">
+                    <figcaption class="frame-tag">FIG 3.0 // TELEMETRY_ARRAY</figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- ============ Contact / Secure Link ============ -->
+    <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact.title">İletişim</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3 data-i18n="contact.heading">Benimle İletişime Geçin</h3>
-                    <p data-i18n="contact.description">Bir proje hakkında konuşmak veya soru sormak ister misiniz? Aşağıdaki yöntemlerle bana ulaşabilirsiniz.</p>
+            <header class="section-head">
+                <span class="section-eyebrow">// SECURE_LINK</span>
+                <h2 class="section-title" data-i18n="contact.title">İletişim</h2>
+                <p class="section-sub" data-i18n="contact.description">Bir proje hakkında konuşmak veya soru sormak ister misiniz? Aşağıdaki kanaldan bana ulaşabilirsiniz.</p>
+            </header>
+
+            <div class="contact-grid">
+                <div class="contact-side">
+                    <div class="status-panel glass">
+                        <p class="panel-label">
+                            <i class="fa-solid fa-server"></i>
+                            <span data-i18n="contact.serverStatus">SUNUCU DURUMU</span>
+                        </p>
+                        <dl class="status-list">
+                            <div><dt data-i18n="contact.uplink">Bağlantı</dt><dd class="ok">ONLINE</dd></div>
+                            <div><dt data-i18n="contact.latency">Gecikme</dt><dd>12ms</dd></div>
+                            <div><dt data-i18n="contact.encryption">Şifreleme</dt><dd>AES-256</dd></div>
+                        </dl>
+                    </div>
+
                     <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
+                        <div class="contact-method glass">
+                            <i class="fa-solid fa-envelope"></i>
                             <div>
                                 <h4 data-i18n="contact.email">Email</h4>
                                 <a href="mailto:onurazbar@gmail.com">onurazbar@gmail.com</a>
                             </div>
                         </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-method glass">
+                            <i class="fa-solid fa-location-dot"></i>
                             <div>
                                 <h4 data-i18n="contact.address">Adres</h4>
-                                <p data-i18n="contact.city">İstanbul, Türkiye</p>
+                                <p data-i18n="contact.city">İzmir, Türkiye</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Adınız" required id="name" data-i18n-placeholder="contact.form.name">
+
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <span class="tdot tdot-red"></span>
+                        <span class="tdot tdot-amber"></span>
+                        <span class="tdot tdot-green"></span>
+                        <span class="terminal-title">bash — contact_protocol.sh</span>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email Adresiniz" required id="email" data-i18n-placeholder="contact.form.email">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Konu" required id="subject" data-i18n-placeholder="contact.form.subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Mesajınız" rows="5" required id="message" data-i18n-placeholder="contact.form.message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" data-i18n="contact.form.send">Gönder</button>
-                </form>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name"><span class="shell">root@oa:~$</span> input --req name</label>
+                            <input type="text" id="name" name="name" required autocomplete="name"
+                                   placeholder="Adınız" data-i18n-placeholder="contact.form.name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><span class="shell">root@oa:~$</span> input --req email</label>
+                            <input type="email" id="email" name="email" required autocomplete="email"
+                                   placeholder="Email Adresiniz" data-i18n-placeholder="contact.form.email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><span class="shell">root@oa:~$</span> input --req subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                   placeholder="Konu" data-i18n-placeholder="contact.form.subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><span class="shell">root@oa:~$</span> open_buffer --write payload</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      placeholder="Mesajınız" data-i18n-placeholder="contact.form.message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span data-i18n="contact.form.send">Gönder</span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    </main>
+
+    <!-- ============ Footer ============ -->
     <footer class="footer">
-        <div class="container">
-            <p data-i18n="footer.copyright">&copy; 2026 Onur Azbar. Tüm Hakları Saklıdır.</p>
+        <div class="container footer-inner">
+            <p class="footer-copy" data-i18n="footer.copyright">&copy; 2026 Onur Azbar. Tüm Hakları Saklıdır.</p>
+            <p class="footer-telemetry">
+                <span class="status-dot"></span>
+                <span data-i18n="footer.telemetry">TELEMETRİ AKTİF</span>
+                <span class="sep">//</span>
+                <span>LAT 38.42 N</span>
+                <span class="sep">//</span>
+                <span>LON 27.14 E</span>
+            </p>
             <div class="footer-social">
-                <a href="https://github.com/onurazbar" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/onur-azbar/" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://github.com/onurazbar" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/onur-azbar/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/projects.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
