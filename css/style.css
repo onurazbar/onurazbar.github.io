@@ -1696,6 +1696,9 @@ section[id] {
     .about-side {
         flex-direction: row;
         flex-wrap: wrap;
+        /* Items size to their own content; stretching would clip the
+           portrait, which is a tall 9:16 crop. */
+        align-items: flex-start;
     }
 
     .portrait-frame,
@@ -1805,6 +1808,13 @@ section[id] {
 
     .about-side {
         flex-direction: column;
+    }
+
+    /* Once the main axis is vertical, the 280px basis above would clamp
+       HEIGHT and crop the portrait. Let content decide instead. */
+    .portrait-frame,
+    .eva-frame {
+        flex: 0 0 auto;
     }
 
     .log-entry {
